@@ -1,0 +1,87 @@
+/* styles.css */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: radial-gradient(circle, #ffdde1, #a79bd7);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    color: white;
+    font-size: 3rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.game-info p {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    grid-template-rows: repeat(3, 120px);
+    gap: 8px;
+    margin: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cell {
+    width: 120px;
+    height: 120px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    border-radius: 10px;
+    user-select: none;
+}
+
+.cell:hover {
+    background: #f8e1f4;
+    transform: scale(1.1);
+}
+
+button {
+    padding: 10px 25px;
+    font-size: 16px;
+    margin-top: 20px;
+    background: #a78fdc;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #e85d7f;
+}
+
+.winning-cell {
+    background: #ffe8a1 !important;
+    animation: flash 0.5s alternate infinite;
+}
+
+@keyframes flash {
+    from {
+        background: #ffe8a1;
+    }
+    to {
+        background: #fff5d9;
+    }
+}
